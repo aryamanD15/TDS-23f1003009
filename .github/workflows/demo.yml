@@ -1,5 +1,18 @@
+name: Sample Email Action
+
+on:
+  push:
+    branches:
+      - main
+
 jobs:
   test:
+    runs-on: ubuntu-latest
+
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
       - name: 23f1003009@ds.study.iitm.ac.in
-        run: echo "Hello, world!"
+        run: echo "Hello, world! This step is identified by your email."
+
